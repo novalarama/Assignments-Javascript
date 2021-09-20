@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+
+     <!--Memanggil Bootstrap-->
+     <link rel="stylesheet" href="css/bootstrap.min.css">
+
+     <script>
+        function validasi() {
+		let username = document.getElementById('username').value;
+		let password = document.getElementById('password').value;
+        
+		if (username === "novalakbar" && password ==="moklet123") {
+			document.getElementById("message").innerHTML=
+            "<div class='alert alert-success'>Selamat anda berhasil Login!</div>";
+		}else{
+			document.getElementById("message").innerHTML=
+            "<div class='alert alert-danger'>Anda gagal login, mohon periksa kembali!</div>";
+		}
+	}
+     </script>
+</head>
+<body>
+    <!--Card Menghitung luas dan keliling segitiga-->
+    <div class="card col-lg-3 col-md-6 m-2">
+        <!--card header-->
+        <div class="card-header bg-primary">
+            <h3 class="text-white">Login Form</h3>
+        </div>
+
+        <!--Card body-->
+        <div class="card-body">
+            <h6 id="message">
+
+            </h6>
+
+            Username
+            <input type="text" class="form-control mb-2" id="username">
+
+            Password
+            <input type="password" class="form-control mb-2" id="password">
+
+        </div>
+
+        <!--Card Footer-->
+        <div class="card-footer">
+            <button class="btn btn-primary btn-block" onclick="validasi()">
+                LOGIN
+            </button>
+        </div>
+    </div>
+</body>
+</html>

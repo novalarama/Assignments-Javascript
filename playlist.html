@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Playlist</title>
+
+    <!-- Menghubungkan ke bootstrap -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <style>
+        .satu{
+            font-family: poppins;
+        }
+    </style>
+
+    <script>
+        function playButton(currentList) {
+            //currentList digunakan untuk menyimpan audio yang saat ini diputar
+            let musics = document.getElementsByTagName("audio");
+            for(let index = 0; index < musics.length; index++){
+                if (musics[index] !== currentList) {
+                    musics[index].pause();
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="container satu">
+        <div class="card">
+
+            <!-- card header -->
+            <div class="card-header bg-info">
+                <h3 class="text-white text-center">My Playlist</h3>
+            </div>
+
+            <!-- card body -->
+            <div class="card-body">
+                <ul class="list-group">
+
+                    <!-- list pertama -->
+                    <li class="list-group-item">
+                        <div class="row"> <!--untuk menyampingkan-->
+                            <!--div untuk gambar-->
+                            <div class="col-lg-4 col-md-6">
+                                <img src="image/ak47 _ tumblr.jfif"
+                                width="120" height="120" alt="">
+                            </div>
+                            <!--div untuk judul dan control lagu-->
+                            <div class="col-lg-8 col-md-6">
+                                <h5 class="text-info">Rose - Gone</h5>
+                                <audio src="lagu/y2mate.com - ROSÉ Gone Lyrics 로제 Gone 가사 Color Coded Lyrics.mp3"
+                                controls onplay="playButton(this)"></audio>
+                            </div>
+                        </div>
+                    </li>
+
+                    <!-- list kedua -->
+                    <li class="list-group-item">
+                        <div class="row"> <!--untuk menyampingkan-->
+                            <!--div untuk gambar-->
+                            <div class="col-lg-4 col-md-6">
+                                <img src="image/Joana-Patrasc.jpg"
+                                width="120" height="120" alt="">
+                            </div>
+                            <!--div untuk judul dan control lagu-->
+                            <div class="col-lg-8 col-md-6">
+                                <h5 class="text-info">BTS - Life Goes On</h5>
+                                <audio src="lagu/y2mate.com - BTS 방탄소년단 Life Goes On Official MV.mp3"
+                                controls onplay="playButton(this)"></audio>
+                            </div>
+                        </div>
+                    </li>
+
+                    <!-- list ketiga -->
+                    <li class="list-group-item">
+                        <div class="row"> <!--untuk menyampingkan-->
+                            <!--div untuk gambar-->
+                            <div class="col-lg-4 col-md-6">
+                                <img src="image/Save=Follow_ không report dưới mọi hình thức _.jfif"
+                                width="120" height="120" alt="">
+                            </div>
+                            <!--div untuk judul dan control lagu-->
+                            <div class="col-lg-8 col-md-6">
+                                <h5 class="text-info">ID 10 - Pelukku untuk Pelikmu</h5>
+                                <audio src="lagu/y2mate.com - Persembahan terakhir dari TOP 15 KEREN banget  Indonesian Idol 2020.mp3"
+                                controls onplay="playButton(this)"></audio>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
